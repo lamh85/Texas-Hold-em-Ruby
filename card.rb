@@ -1,6 +1,6 @@
 class Card
 
-    attr_accesor :number_strength, :suit_strength, :number_display, :suit_display
+    attr_accessor :number_strength, :suit_strength, :number_display, :suit_display
 
     def initialize(number_strength, suit_strength)
         @number_strength    = number_strength
@@ -15,6 +15,6 @@ class Card
 
     def suit_display(strength)
         return ["diamonds", "clubs", "hearts", "spades"][strength - 1]
-    end    
+    end
 
 end
