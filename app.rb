@@ -27,10 +27,12 @@
         end
     end
 
-    def transfer_card(destination_array)
-        transferred_card = deck.sample
-        destination_array << transferred_card
-        deck.delete(transferred_card)
+    def transfer_card(destination_array, num_of_times = 1)
+        num_of_times.each {
+            transferred_card = deck.sample
+            destination_array << transferred_card
+            deck.delete(transferred_card)
+        }
     end
 
     def flop(num_of_times)
