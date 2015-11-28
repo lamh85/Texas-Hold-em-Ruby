@@ -1,16 +1,24 @@
 class Session
 
-    attr_accessor :deck, :burns, :community, :player_hand, :num_of_opponents, :flop_number
+    attr_accessor :deck, :burns, :community, :player_hand, :num_of_opponents, :opponents, :flop_number
 
     @deck = []
     @burns = []
     @community = []
     @player_hand = []
     @num_of_opponents = []
+    @opponents = []
     @flop_number = 1
 
-    def print_status
+    def print_community
+        puts "Community cards:"
+        @community.each { |card|
+            puts card.display
+        }
+    end
 
+    def print_status
+        puts "Community cards:"
     end
 
     def number_display(strength)
